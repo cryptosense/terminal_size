@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/cryptosense/terminal_size.svg)](https://travis-ci.org/cryptosense/terminal_size)
+
 # `Terminal_size`
 
 ## What is it?
