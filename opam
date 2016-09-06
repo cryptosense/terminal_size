@@ -1,0 +1,15 @@
+opam-version: "1.2"
+maintainer: "Etienne Millon <etienne@cryptosense.com>"
+authors: "Etienne Millon <etienne@cryptosense.com>"
+homepage: "https://github.com/cryptosense/terminal-size"
+bug-reports: "https://github.com/cryptosense/terminal-size/issues"
+license: "BSD-2"
+dev-repo: "https://github.com/cryptosense/terminal-size.git"
+build: [
+  [ "ocaml" "pkg/pkg.ml" "build" ]
+]
+build-test: [make "check"]
+remove: ["ocamlfind" "remove" "terminal-size"]
+depends: [
+  "ocamlfind" {build}
+]

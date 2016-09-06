@@ -1,0 +1,2 @@
+<src/terminal_size.{cma,cmxa}> : use_terminal_size
+<src/terminal_size.cmxs> : link_terminal_size
