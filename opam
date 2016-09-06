@@ -8,7 +8,6 @@ dev-repo: "https://github.com/cryptosense/terminal-size.git"
 build: [
   [ "ocaml" "pkg/pkg.ml" "build" ]
 ]
-build-test: [make "check"]
 remove: ["ocamlfind" "remove" "terminal-size"]
 depends: [
   "ocamlfind" {build}
