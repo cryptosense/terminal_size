@@ -1,3 +1,5 @@
+(** Get the dimensions of the terminal *)
+
 (** Return the number of rows that can be displayed *)
 val get_rows : unit -> int option
 
