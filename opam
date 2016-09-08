@@ -6,9 +6,10 @@ bug-reports: "https://github.com/cryptosense/terminal-size/issues"
 license: "BSD-2"
 dev-repo: "https://github.com/cryptosense/terminal-size.git"
 build: [
-  [ "ocaml" "pkg/pkg.ml" "build" ]
+  [ "ocaml" "pkg/pkg.ml" "build" "--pinned" pinned ]
 ]
 depends: [
+  "ocamlbuild" {build}
   "ocamlfind" {build}
   "topkg" {build}
 ]
