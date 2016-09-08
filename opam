@@ -9,6 +9,7 @@ build: [
   [ "ocaml" "pkg/pkg.ml" "build" ]
 ]
 depends: [
+  "ocamlbuild" {build}
   "ocamlfind" {build}
   "topkg" {build}
 ]
