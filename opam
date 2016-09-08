@@ -5,6 +5,7 @@ homepage: "https://github.com/cryptosense/terminal_size"
 bug-reports: "https://github.com/cryptosense/terminal_size/issues"
 license: "BSD-2"
 dev-repo: "https://github.com/cryptosense/terminal_size.git"
+doc: "https://cryptosense.github.io/terminal_size/doc"
 build: [
   [ "ocaml" "pkg/pkg.ml" "build" "--pinned" pinned ]
 ]
