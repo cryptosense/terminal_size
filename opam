@@ -1,10 +1,10 @@
 opam-version: "1.2"
 maintainer: "Etienne Millon <etienne@cryptosense.com>"
 authors: "Etienne Millon <etienne@cryptosense.com>"
-homepage: "https://github.com/cryptosense/terminal-size"
-bug-reports: "https://github.com/cryptosense/terminal-size/issues"
+homepage: "https://github.com/cryptosense/terminal_size"
+bug-reports: "https://github.com/cryptosense/terminal_size/issues"
 license: "BSD-2"
-dev-repo: "https://github.com/cryptosense/terminal-size.git"
+dev-repo: "https://github.com/cryptosense/terminal_size.git"
 build: [
   [ "ocaml" "pkg/pkg.ml" "build" "--pinned" pinned ]
 ]
