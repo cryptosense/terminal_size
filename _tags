@@ -4,3 +4,5 @@ true: safe_string
 <src>: include
 <src/terminal_size.{cma,cmxa}> : use_terminal_size
 <src/terminal_size.cmxs> : link_terminal_size
+<test/*>: package(oUnit)
+<test/*>: use_terminal_size
