@@ -9,9 +9,14 @@ doc: "https://cryptosense.github.io/terminal_size/doc"
 build: [
   [ "ocaml" "pkg/pkg.ml" "build" "--pinned" "%{pinned}%" ]
 ]
+build-test: [
+  [ "ocaml" "pkg/pkg.ml" "build" "--pinned" "%{pinned}%" "--tests" "true" ]
+  [ "ocaml" "pkg/pkg.ml" "test" ]
+]
 depends: [
   "ocamlbuild" {build}
   "ocamlfind" {build}
+  "ounit" {test}
   "topkg" {build}
 ]
 available: [ocaml-version >= "4.01.0"]
