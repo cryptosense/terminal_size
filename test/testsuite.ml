@@ -1,21 +1,20 @@
-open OUnit2
-
-let test_enabled ctxt =
+let test_enabled () =
   Unix.putenv "FAKE_ROWS" "1234";
   Unix.putenv "FAKE_COLS" "5678";
-  assert_equal ~ctxt (Terminal_size.get_rows ()) (Some 1234);
-  assert_equal ~ctxt (Terminal_size.get_columns ()) (Some 5678);
+  Alcotest.check Alcotest.(option int) "rows" (Terminal_size.get_rows ()) (Some 1234);
+  Alcotest.check Alcotest.(option int) "columns" (Terminal_size.get_columns ()) (Some 5678);
   Unix.putenv "FAKE_ROWS" "";
   Unix.putenv "FAKE_COLS" ""
 
-let test_disabled ctxt =
-  assert_equal ~ctxt (Terminal_size.get_rows ()) None;
-  assert_equal ~ctxt (Terminal_size.get_columns ()) None
+let test_disabled () =
+  Alcotest.check Alcotest.(option int) "rows" (Terminal_size.get_rows ()) None;
+  Alcotest.check Alcotest.(option int) "columns" (Terminal_size.get_columns ()) None
 
 let suite =
-  "Terminal_size" >::: [
-    "enabled" >:: test_enabled;
-    "disabled" >:: test_disabled;
+  [ "Terminal_size", [
+      "enabled", `Quick, test_enabled;
+      "disabled", `Quick, test_disabled;
+    ]
   ]
 
 let preload () =
@@ -35,4 +34,4 @@ let preload () =
 
 let () =
   preload ();
-  run_test_tt_main suite
+  Alcotest.run "terminal_size" suite
