@@ -16,7 +16,7 @@ build-test: [
 depends: [
   "ocamlbuild" {build}
   "ocamlfind" {build}
-  "ounit" {test}
+  "alcotest" {test}
   "topkg" {build}
 ]
 available: [ocaml-version >= "4.01.0"]
