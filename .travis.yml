@@ -7,3 +7,4 @@ env:
   - OCAML_VERSION=4.02 PACKAGE=terminal_size
   - OCAML_VERSION=4.03 PACKAGE=terminal_size
   - OCAML_VERSION=4.04 PACKAGE=terminal_size
+  - OCAML_VERSION=4.05 PACKAGE=terminal_size
