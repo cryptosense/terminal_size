@@ -1,3 +1,13 @@
+v0.1.3
+------
+
+*2017-05-02*
+
+Tests:
+
+- Use the correct signature for `ioctl`.
+  This fixes tests on OSX (#8, #9).
+
 v0.1.2
 ------
 
