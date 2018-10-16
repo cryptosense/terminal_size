@@ -7,16 +7,13 @@ license: "BSD-2"
 dev-repo: "git+https://github.com/cryptosense/terminal_size.git"
 doc: "https://cryptosense.github.io/terminal_size/doc"
 build: [
-  [ "ocaml" "pkg/pkg.ml" "build" "--pinned" "%{pinned}%" ]
+  ["dune" "build" "-p" name "-j" jobs]
 ]
 run-test: [
-  [ "ocaml" "pkg/pkg.ml" "build" "--pinned" "%{pinned}%" "--tests" "true" ]
-  [ "ocaml" "pkg/pkg.ml" "test" ]
+  ["dune" "runtest" "-p" name "-j" jobs]
 ]
 depends: [
-  "ocaml" {>= "4.01.0"}
-  "ocamlbuild" {build}
-  "ocamlfind" {build}
   "alcotest" {with-test}
-  "topkg" {build}
+  "dune" {build & >= "1.2.0"}
+  "ocaml" {>= "4.01.0"}
 ]
