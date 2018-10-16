@@ -17,3 +17,8 @@ depends: [
   "dune" {build & >= "1.2.0"}
   "ocaml" {>= "4.01.0"}
 ]
+synopsis: "Get the dimensions of the terminal"
+description: """
+You can use this small library to detect the dimensions of the terminal window
+attached to a process.
+"""
