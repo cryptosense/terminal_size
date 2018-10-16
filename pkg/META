@@ -1,7 +1,0 @@
-version = "%%VERSION_NUM%%"
-description = "Get the terminal size"
-archive(byte) = "terminal_size.cma"
-archive(native) = "terminal_size.cmxa"
-plugin(byte) = "terminal_size.cma"
-plugin(native) = "terminal_size.cmxs"
-requires = ""

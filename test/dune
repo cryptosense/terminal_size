@@ -1,0 +1,17 @@
+(test
+  (name testsuite)
+  (libraries
+    alcotest
+    terminal_size
+  )
+  (action
+    (setenv LD_PRELOAD ./%{dep:dllmock_ioctl.so}
+      (run %{test})
+    )
+  )
+)
+
+(rule
+  (targets dllmock_ioctl.so)
+  (action (run %{cc} -shared -o %{targets} %{dep:mock_ioctl.c}))
+)
