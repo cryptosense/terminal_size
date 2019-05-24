@@ -1,3 +1,13 @@
+v0.1.4
+------
+
+*2019-05-24*
+
+Build system:
+
+- Upgrade to opam 2
+- Build with dune
+
 v0.1.3
 ------
 
