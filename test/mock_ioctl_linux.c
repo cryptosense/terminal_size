@@ -6,11 +6,18 @@
 #include <stdio.h>
 #include <sys/ioctl.h>
 
-typedef int (*ioctl_t)(int, unsigned long, char*);
+/* Work around differing ioctl signatures between alpine and debian */
+#ifdef __GLIBC__
+typedef unsigned long request_t;
+#else
+typedef int request_t;
+#endif
+
+typedef int (*ioctl_t)(int, request_t, char*);
 
 static ioctl_t real_ioctl = NULL;
 
-int ioctl(int fd, unsigned long request, ...)
+int ioctl(int fd, request_t request, ...)
 {
 	va_list ap;
 	va_start(ap, request);

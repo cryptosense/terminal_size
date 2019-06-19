@@ -7,9 +7,9 @@ script: bash ./.travis-docker.sh
 env:
   global:
     - PACKAGE=terminal_size
-    - DISTRO=debian-stable
   matrix:
-    - OCAML_VERSION=4.04
-    - OCAML_VERSION=4.05
-    - OCAML_VERSION=4.06
-    - OCAML_VERSION=4.07
+    - OCAML_VERSION=4.04 DISTRO=debian-stable
+    - OCAML_VERSION=4.05 DISTRO=debian-stable
+    - OCAML_VERSION=4.06 DISTRO=debian-stable
+    - OCAML_VERSION=4.07 DISTRO=debian-stable
+    - OCAML_VERSION=4.07 DISTRO=alpine
