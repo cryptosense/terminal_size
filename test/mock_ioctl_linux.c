@@ -6,8 +6,9 @@
 #include <stdio.h>
 #include <sys/ioctl.h>
 
-/* Work around differing ioctl signatures between alpine and debian */
-#ifdef __GLIBC__
+/* Work around differing ioctl signatures between muscl (alpine), */
+/* glibc (debian) and libsystem (mac)                             */
+#if defined(__GLIBC__) || defined(__APPLE__)
 typedef unsigned long request_t;
 #else
 typedef int request_t;
