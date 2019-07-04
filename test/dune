@@ -20,12 +20,12 @@
 
 (rule
   (targets libmock_ioctl.dylib)
-  (enabled_if (= %{os_type} macosx))
+  (enabled_if (= %{system} macosx))
   (action (run %{cc} -dynamiclib -o %{targets} %{dep:mock_ioctl_mac.c}))
 )
 
 (rule
   (targets libmock_ioctl.dylib)
-  (enabled_if (<> %{os_type} macosx))
+  (enabled_if (<> %{system} macosx))
   (action (write-file %{targets} ""))
 )
