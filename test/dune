@@ -1,5 +1,6 @@
 (test
   (name testsuite)
+  (enabled_if (= %{os_type} Unix))
   (libraries
     alcotest
     terminal_size
@@ -15,6 +16,7 @@
 
 (rule
   (targets dllmock_ioctl.so)
+  (enabled_if (= %{os_type} Unix))
   (action (run %{cc} -shared -o %{targets} %{dep:mock_ioctl_linux.c}))
 )
 
