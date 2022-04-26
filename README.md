@@ -19,7 +19,7 @@ Usually, to get this information, one would open a pipe from `tput cols` or
 `stty size` and parsing the output. Instead, this uses the `ioctl` that these
 commands use, `TIOCGWINSZ`.
 
-[build_status_badge]: https://github.com/cryptosense/pkcs11/actions/workflows/main.yml/badge.svg
-[build_status_link]: https://github.com/cryptosense/pkcs11/actions/workflows/main.yml
+[build_status_badge]: https://github.com/cryptosense/terminal_size/actions/workflows/main.yml/badge.svg
+[build_status_link]: https://github.com/cryptosense/terminal_size/actions/workflows/main.yml
 [doc_badge]: https://img.shields.io/badge/doc-online-blue.svg
-[doc_link]: https://cryptosense.github.io/pkcs11/doc/
+[doc_link]: https://cryptosense.github.io/terminal_size/doc/
