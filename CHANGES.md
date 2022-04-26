@@ -1,3 +1,11 @@
+v0.2.0
+------
+
+*2022-04-26*
+
+- Add compatibility with Windows.
+- Require Dune >= 2.0 and OCaml >= 4.08.
+
 v0.1.4
 ------
 
